@@ -12,7 +12,8 @@ router.post('/', function (req, res) {
         console.log(req.body.username);
         account = req.body.username;
 
-        sbd_api_url = "https://min-api.cryptocompare.com/data/price?fsym=SBD&tsyms=TRY,USD";
+        function* generator() {
+            sbd_api_url = "https://min-api.cryptocompare.com/data/price?fsym=SBD&tsyms=TRY,USD";
         request.get(sbd_api_url, { json: true }, function (err, res, body) {
             console.log(body);
             sbd_api_usd = body.USD;
@@ -42,6 +43,9 @@ router.post('/', function (req, res) {
             steem_try = (parseFloat(steem_balance)) * (parseFloat(steem_try));
             sum_try = sbd_try + steem_try;
         });
+        }
+        var g = generator();
+        g.next();
 
     setTimeout(function(){
 
