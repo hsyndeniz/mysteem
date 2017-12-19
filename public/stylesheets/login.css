@@ -7,7 +7,7 @@
     url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
     animation: wind 20s linear infinite;
     padding-bottom: 20px;
-    min-height: 500px;
+    height: 100%;
 
 }
 .circl {
@@ -15,9 +15,6 @@
     border-radius: 50%;
     background-color: lightblue;
 
-}
-.btn-outline-dark {
-    visibility:hidden;
 }
 .input-group{
     max-width:80%;
