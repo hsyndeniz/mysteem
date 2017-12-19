@@ -65,7 +65,7 @@ router.post('/', function (req, res) {
             sum_try:sum_try
         });
 
-    }, 5000);
+    }, 9000);
 
 
 
