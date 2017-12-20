@@ -58,23 +58,15 @@ router.post('/', function (req, res) {
             sum_usd:(sum_usd)
            // sum_try:(sum_try).toFixed(2)
         });
-    }, 9000);
+    }, 3000);
     }
 );
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    setTimeout(function(){
         res.render('user', {
-            steem_balance:steem_balance,
-            sbd_balance:sbd_balance,
-            rep:rep, name:name,
-            sbd_usd:sbd_usd,
-            steem_usd:steem_usd,
-            sum_usd:sum_usd
-          //  sum_try:sum_try
+
         });
-    },15000);
 });
 
 module.exports = router;
